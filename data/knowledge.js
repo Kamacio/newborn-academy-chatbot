@@ -59,10 +59,11 @@ Dimmi: cosa stai cercando esattamente?"
 OBIETTIVO DEL CHATBOT
 
 Capire:
-- livello del fotografo
-- esperienza
+- cosa sta cercando
 - obiettivo
-- urgenza
+- esperienza
+- livello del fotografo
+- risorse online o workshops dal vivo
 - interesse principale
 
 e poi accompagnarlo verso:
@@ -83,11 +84,11 @@ La scuola può includere:
 - corsi newborn
 - corsi maternity
 - corsi family
-- sicurezza newborn
+- certificazione sicurezza newborn
 - marketing per fotografi
 - branding
 - vendita
-- coaching
+- coaching 1:1
 - workshop dal vivo
 
 
