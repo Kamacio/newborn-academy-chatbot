@@ -1,4 +1,5 @@
 import { knowledgeBase } from '../data/knowledge.js';
+
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST');
@@ -8,7 +9,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { message } = req.body;
+    const { messages } = req.body;
 
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
@@ -22,12 +23,8 @@ export default async function handler(req, res) {
           {
             role: 'system',
             content: knowledgeBase
-
           },
-          {
-            role: 'user',
-            content: message
-          }
+          ...messages
         ],
         temperature: 0.7
       })
