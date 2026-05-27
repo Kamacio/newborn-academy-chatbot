@@ -119,7 +119,7 @@
 
       chat.innerHTML += `
         <div class="message bot">
-          <strong>Assistant:</strong> ${data.reply}
+          <strong>Assistant:</strong> ${data.reply || data.error || JSON.stringify(data)}
         </div>
       `;
 
