@@ -22,7 +22,7 @@ export default async function handler(req, res) {
           {
             role: 'system',
             content: knowledgeBase
-`
+
           },
           {
             role: 'user',
