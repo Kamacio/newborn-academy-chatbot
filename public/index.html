@@ -341,6 +341,13 @@ const now = new Date().toLocaleTimeString('it-IT', {
     role: 'user',
     content: text
   });
+const formattedConversation = conversation
+  .map(msg => {
+    const speaker = msg.role === 'assistant' ? 'NEO' : 'UTENTE';
+    return `${speaker}: ${msg.content}`;
+  })
+  .join('\n\n');
+
 fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
   method: 'POST',
   headers: {
@@ -348,7 +355,7 @@ fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
   },
   body: JSON.stringify({
     message: text,
-    conversation: conversation,
+    conversation: formattedConversation,
     page: window.location.href,
     timestamp: new Date().toISOString()
   })
