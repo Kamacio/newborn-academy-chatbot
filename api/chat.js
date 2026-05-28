@@ -1,4 +1,4 @@
-import { knowledgeBase } from '../data/knowledge.js';
+const { knowledgeBase } = require('../data/knowledge.js');
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
