@@ -179,7 +179,18 @@ async function sendMessage() {
   `;
 
   input.value = '';
+const typingMessage = document.createElement('div');
 
+typingMessage.className = 'message bot';
+typingMessage.id = 'typing';
+
+typingMessage.innerHTML = `
+  <strong>NEO:</strong> sta scrivendo...
+`;
+
+chat.appendChild(typingMessage);
+
+chat.scrollTop = chat.scrollHeight;
   const response = await fetch('/api/chat', {
     method: 'POST',
     headers: {
@@ -191,7 +202,7 @@ async function sendMessage() {
   });
 
   const data = await response.json();
-
+document.getElementById('typing').remove();
   conversation.push({
     role: 'assistant',
     content: data.reply
