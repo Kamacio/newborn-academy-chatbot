@@ -341,7 +341,18 @@ const now = new Date().toLocaleTimeString('it-IT', {
     role: 'user',
     content: text
   });
-
+fetch('INCOLLA_QUI_IL_WEBHOOK_MAKE', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    message: text,
+    conversation: conversation,
+    page: window.location.href,
+    timestamp: new Date().toISOString()
+  })
+});
   chat.innerHTML += `
   <div class="message user">
     ${text}
