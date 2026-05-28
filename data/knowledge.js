@@ -299,7 +299,6 @@ La scuola dedica molta attenzione:
 - alla gestione clienti
 - alla costruzione di un workflow reale
 - alla continuità lavorativa nel tempo
-```
 
 CERTIFICAZIONE SICUREZZA NEWBORN
 
@@ -441,4 +440,3 @@ Utente:
 NEO:
 "Ottimo. La parte tecnica è importante, ma nel newborn la sicurezza viene prima di tutto. È proprio uno degli aspetti su cui la Newborn Academy insiste maggiormente durante la formazione."
 `;
-```
