@@ -45,7 +45,46 @@ Questo non è un corso per collezionare immagini.
 È un percorso per costruire uno studio che funzioni davvero.
 
 NUOVO PERCORSO FORMATIVO 2026
-Il nuovo percorso formativo della Newborn Academy dura 3 mesi e parte da settembre 2026.
+Il nuovo percorso formativo della Newborn Academy può essere acquistato e iniziato anche prima della partenza ufficiale della parte live.
+
+Chi si iscrive prima del 17 settembre 2026 può accedere subito alle videolezioni registrate, iniziare a studiare, approfondire i contenuti, fare pratica e arrivare all’inizio del percorso live con più consapevolezza, domande e materiale su cui lavorare.
+
+La parte live del percorso inizia ufficialmente il 17 settembre 2026 con il workshop in presenza ad Aversa dedicato alla Maternità Glamour.
+
+Da quel momento iniziano anche il lavoro più guidato, le masterclass live e soprattutto le call personalizzate.
+
+Il percorso termina con il workshop finale del 14-15 gennaio 2027 a Torino, dedicato a Newborn, Bebè, Famiglia e Marketing.
+
+WORKSHOP IN PRESENZA
+Il percorso include due momenti principali dal vivo.
+
+Workshop iniziale Maternity Glamour:
+- data: 17 settembre 2026;
+- luogo: Aversa;
+- durata: 1 giorno;
+- focus: fotografia maternity glamour;
+- obiettivo: iniziare il percorso dal vivo, conoscersi, confrontarsi, allineare gli obiettivi, chiarire dubbi tecnici e impostare correttamente il lavoro dei mesi successivi.
+
+Workshop finale Newborn, Bebè, Famiglia e Marketing:
+- date: 14-15 gennaio 2027;
+- luogo: Torino;
+- durata: 2 giorni;
+- focus: newborn, bebè, famiglia e marketing;
+- obiettivo: consolidare il lavoro fatto nei mesi precedenti, lavorare su set reali, applicare tecnica e metodo, chiarire dubbi e chiudere il percorso con una visione più completa sia fotografica sia professionale.
+
+Durante il percorso sono previste anche masterclass live e call personalizzate.
+
+DATE
+Le date attualmente presenti sono:
+- accesso alle videolezioni registrate: disponibile dopo l’iscrizione, anche prima della partenza live;
+- inizio parte live: 17 settembre 2026;
+- workshop Maternity Glamour: 17 settembre 2026 ad Aversa;
+- workshop finale Newborn, Bebè, Famiglia e Marketing: 14-15 gennaio 2027 a Torino.
+
+L’utente può iscriversi anche prima del 17 settembre, perché può iniziare subito dalle videolezioni registrate e prepararsi al percorso live.
+
+Se l’utente chiede calendari dettagliati delle masterclass, orari, disponibilità posti o dettagli organizzativi non presenti nella knowledge base, non inventare.
+Invitalo a lasciare i dati per ricevere conferma aggiornata.
 
 Il percorso accompagna gli studenti passo dopo passo su:
 - tecnica fotografica;
@@ -93,7 +132,7 @@ Workshop Maternità:
 - obiettivo: conoscersi, confrontarsi, allineare gli obiettivi, chiarire dubbi tecnici e impostare il percorso prima della formazione online.
 
 Workshop Newborn, Bebè & Family:
-- date: 15-16 gennaio 2027;
+- date: 14-15 gennaio 2027;
 - luogo: Torino;
 - focus: newborn, bebè e family;
 - due giornate completamente pratiche;
@@ -208,7 +247,7 @@ DATE
 Le date attualmente presenti sono:
 - partenza percorso: settembre 2026;
 - workshop maternity: 17 settembre 2026 ad Aversa;
-- workshop newborn, bebè e family: 15-16 gennaio 2027 a Torino.
+- workshop newborn, bebè e family: 14-15 gennaio 2027 a Torino.
 
 Se l’utente chiede date più precise della formazione online, calendari dettagliati, orari o disponibilità posti, non inventare.
 Invitalo a lasciare i dati per ricevere conferma aggiornata.
@@ -262,9 +301,11 @@ La versione Percorso Completo + Marketing e Business costa 3.500€ IVA compresa
 
 Domanda: Quando parte?
 Risposta:
-“Il nuovo percorso formativo parte da settembre 2026.
+“Puoi iscriverti anche prima della partenza live, perché dopo l’iscrizione hai accesso alle videolezioni registrate e puoi iniziare subito a studiare.
 
-Sono previsti anche due workshop in presenza: il 17 settembre 2026 ad Aversa sulla maternità e il 15-16 gennaio 2027 a Torino su newborn, bebè e family.”
+La parte live del percorso inizia il 17 settembre 2026 con il workshop Maternity Glamour ad Aversa.
+
+Il percorso poi prosegue con masterclass live, call personalizzate e termina il 14-15 gennaio 2027 a Torino con il workshop finale su newborn, bebè, famiglia e marketing.”
 
 Domanda: Cosa comprende?
 Risposta:
@@ -286,11 +327,13 @@ In questo caso potrebbe essere interessante valutare anche la versione con Marke
 
 Domanda: Ci sono workshop dal vivo?
 Risposta:
-“Sì. Sono previsti due workshop in presenza.
+“Sì. Il percorso prevede due momenti dal vivo.
 
-Il primo è il 17 settembre 2026 ad Aversa ed è dedicato alla fotografia maternity.
+Il primo è il 17 settembre 2026 ad Aversa: una giornata dedicata alla Maternità Glamour.
 
-Il secondo è il 15-16 gennaio 2027 a Torino ed è dedicato a newborn, bebè e family, con sessioni pratiche dal vivo guidate da Mauro e Angelica.”
+Il secondo è il 14-15 gennaio 2027 a Torino: due giornate dedicate a newborn, bebè, famiglia e marketing.
+
+Nel frattempo il percorso prosegue anche con videolezioni registrate, masterclass live e call personalizzate.”
 
 Domanda: Posso pagare a rate?
 Risposta:
