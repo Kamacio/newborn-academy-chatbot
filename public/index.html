@@ -156,6 +156,29 @@
     transform: translateY(0);
   }
 }
+    .quick-actions {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 0 15px 10px;
+  background: #111;
+}
+
+.quick-actions button {
+  white-space: nowrap;
+  background: #1d1d1d;
+  color: white;
+  border: 1px solid #333;
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.quick-actions button:hover {
+  background: #2a2a2a;
+}
     .input-row {
   display: flex;
   gap: 10px;
