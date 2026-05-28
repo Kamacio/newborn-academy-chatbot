@@ -510,7 +510,8 @@ try {
   return;
 }
 
-document.getElementById('typing').remove();
+const typing = document.getElementById('typing');
+if (typing) typing.remove();
 
   const data = await response.json();
 document.getElementById('typing').remove();
