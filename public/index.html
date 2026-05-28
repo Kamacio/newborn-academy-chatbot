@@ -508,11 +508,26 @@ document.getElementById('typing').remove();
         Se vuoi, puoi lasciarmi i tuoi dati e ti mandiamo le informazioni più adatte al tuo caso.
 
         <div class="lead-form">
-          <input id="leadName" type="text" placeholder="Nome">
+          <input
+  id="leadName"
+  type="text"
+  placeholder="Nome"
+  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
+>
 
-          <input id="leadEmail" type="email" placeholder="Email">
+<input
+  id="leadEmail"
+  type="email"
+  placeholder="Email"
+  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
+>
 
-          <input id="leadPhone" type="tel" placeholder="Telefono">
+<input
+  id="leadPhone"
+  type="tel"
+  placeholder="Telefono"
+  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
+>
 
           <button type="button" onclick="sendLead()">
             Invia i miei dati
@@ -564,34 +579,17 @@ document.getElementById('typing').remove();
   const form = document.querySelector('.lead-form');
 
   if (form) {
-    form.innerHTML = `
-      <div style="line-height:1.5;">
-        <strong>Dati inviati:</strong><br>
-        Nome: ${name || '-'}<br>
-        Email: ${email || '-'}<br>
-        Telefono: ${phone || '-'}<br><br>
-        Perfetto, grazie. Abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.<br><br>
-        Nel frattempo puoi continuare a farmi domande qui in chat.
-      </div>
-    `;
-  }
-
-  conversation.push({
-    role: 'assistant',
-    content: 'Grazie, abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.'
-  });
-
+  form.innerHTML = `
+    <div style="line-height:1.5;">
+      <strong>Dati inviati:</strong><br>
+      Nome: ${name || '-'}<br>
+      Email: ${email || '-'}<br>
+      Telefono: ${phone || '-'}<br><br>
+      Perfetto, grazie. Abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.<br><br>
+      Nel frattempo puoi continuare a farmi domande qui in chat.
+    </div>
+  `;
 }
-
-  if (form) {
-    form.innerHTML = `
-      <div style="line-height:1.5;">
-        Perfetto, grazie ${name || ''}.<br>
-        Abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.<br><br>
-        Nel frattempo, se vuoi, puoi continuare a farmi domande qui in chat.
-      </div>
-    `;
-  }
 
   conversation.push({
     role: 'assistant',
