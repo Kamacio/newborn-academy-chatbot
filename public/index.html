@@ -531,6 +531,13 @@ document.getElementById('typing').remove();
   const email = document.getElementById('leadEmail').value.trim();
   const phone = document.getElementById('leadPhone').value.trim();
 
+  const leadText = `Nome: ${name || '-'}\nEmail: ${email || '-'}\nTelefono: ${phone || '-'}`;
+
+  conversation.push({
+    role: 'user',
+    content: leadText
+  });
+
   const formattedConversation = conversation
     .map(msg => {
       const speaker = msg.role === 'assistant' ? 'NEO' : 'UTENTE';
@@ -555,6 +562,26 @@ document.getElementById('typing').remove();
   });
 
   const form = document.querySelector('.lead-form');
+
+  if (form) {
+    form.innerHTML = `
+      <div style="line-height:1.5;">
+        <strong>Dati inviati:</strong><br>
+        Nome: ${name || '-'}<br>
+        Email: ${email || '-'}<br>
+        Telefono: ${phone || '-'}<br><br>
+        Perfetto, grazie. Abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.<br><br>
+        Nel frattempo puoi continuare a farmi domande qui in chat.
+      </div>
+    `;
+  }
+
+  conversation.push({
+    role: 'assistant',
+    content: 'Grazie, abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.'
+  });
+
+}
 
   if (form) {
     form.innerHTML = `
