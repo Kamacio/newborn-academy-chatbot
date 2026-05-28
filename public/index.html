@@ -152,14 +152,36 @@ window.onload = function() {
   `;
 
   setTimeout(() => {
-  chat.innerHTML += welcomeMessage;
-  chat.scrollTop = chat.scrollHeight;
-}, 1200);
 
-  conversation.push({
-    role: 'assistant',
-    content: 'Messaggio iniziale inviato'
-  });
+  const typingMessage = document.createElement('div');
+
+  typingMessage.className = 'message bot';
+  typingMessage.id = 'welcomeTyping';
+
+  typingMessage.innerHTML = `
+    <strong>NEO:</strong> sta scrivendo...
+  `;
+
+  chat.appendChild(typingMessage);
+
+  chat.scrollTop = chat.scrollHeight;
+
+  setTimeout(() => {
+
+    document.getElementById('welcomeTyping').remove();
+
+    chat.innerHTML += welcomeMessage;
+
+    chat.scrollTop = chat.scrollHeight;
+
+    conversation.push({
+      role: 'assistant',
+      content: 'Messaggio iniziale inviato'
+    });
+
+  }, 1800);
+
+}, 1000);
 
 };
 async function sendMessage() {
