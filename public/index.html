@@ -48,6 +48,18 @@
   font-size: 14px;
 }
 
+.neo-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #6b8f71;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
     .bot-row {
   display: flex;
   align-items: flex-start;
@@ -212,7 +224,8 @@ button {
     <p>Assistente Newborn Academy</p>
   </div>
 </div>
-    
+    <div id="chat"></div>
+
     <div class="input-row">
       <input
         type="text"
@@ -365,7 +378,11 @@ document.getElementById('typing').remove();
 
   chat.scrollTop = chat.scrollHeight;
 }
-
+document.getElementById('message').addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    sendMessage();
+  }
 });
   </script>
 
