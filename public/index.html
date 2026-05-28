@@ -337,6 +337,15 @@ async function sendMessage() {
 );
 
 const detectedEmail = emailMatch ? emailMatch[0] : null;
+  const phoneMatch = text.match(
+  /(\+39\s?)?(\d[\s-]?){8,15}/
+);
+
+const detectedPhone = phoneMatch
+  ? phoneMatch[0]
+      .replace(/\s/g, '')
+      .replace(/-/g, '')
+  : null;
 const now = new Date().toLocaleTimeString('it-IT', {
   hour: '2-digit',
   minute: '2-digit'
