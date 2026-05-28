@@ -490,30 +490,30 @@
               Se vuoi, puoi lasciarmi i tuoi dati e ti mandiamo le informazioni più adatte al tuo caso.
 
               <div class="lead-form">
-                <input
-                  id="leadName"
-                  type="text"
-                  placeholder="Nome"
-                  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
-                >
+                <input 
+  type="text" 
+  id="leadName" 
+  placeholder="Il tuo nome"
+  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
+>
 
-                <input
-                  id="leadEmail"
-                  type="email"
-                  placeholder="Email"
-                  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
-                >
+                <input 
+  type="email" 
+  id="leadEmail" 
+  placeholder="La tua email"
+  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
+>
 
-                <input
-                  id="leadPhone"
-                  type="tel"
-                  placeholder="Telefono"
-                  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
-                >
+                <input 
+  type="tel" 
+  id="leadPhone" 
+  placeholder="Telefono"
+  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
+>
 
                 <button type="button" onclick="sendLead()">
-                  Invia i miei dati
-                </button>
+  Invia
+</button>
               </div>
             </div>
           </div>
