@@ -560,21 +560,27 @@ document.getElementById('typing').remove();
     })
     .join('\n\n');
 
-  fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486x9b15', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      name: name,
-      email: email,
-      phone: phone,
-      conversation: formattedConversation,
-      page: window.location.href,
-      timestamp: new Date().toISOString(),
-      lead_form: true
-    })
-  });
+ fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    name: name,
+    email: email,
+    phone: phone,
+    conversation: formattedConversation,
+    page: window.location.href,
+    timestamp: new Date().toISOString(),
+    lead_form: true
+  })
+})
+.then(res => {
+  console.log('Lead inviato', res.status);
+})
+.catch(err => {
+  console.error('Errore invio lead:', err);
+});
 
   const form = document.querySelector('.lead-form');
 
