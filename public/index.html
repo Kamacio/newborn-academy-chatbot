@@ -201,6 +201,29 @@
 .quick-actions button:hover {
   background: #2a2a2a;
 }
+    .lead-form {
+  background: #181818;
+  border: 1px solid #2a2a2a;
+  border-radius: 18px;
+  padding: 14px;
+  margin-top: 10px;
+}
+
+.lead-form input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  padding: 12px;
+  background: #222;
+  color: white;
+  border: 1px solid #333;
+}
+
+.lead-form button {
+  width: 100%;
+  border-radius: 12px;
+}
     .input-row {
   display: flex;
   gap: 10px;
@@ -445,6 +468,35 @@ document.getElementById('typing').remove();
     </div>
   </div>
 `;
+  if (
+  text.toLowerCase().includes('prezzo') ||
+  text.toLowerCase().includes('costo') ||
+  text.toLowerCase().includes('informazioni') ||
+  text.toLowerCase().includes('chiamata') ||
+  text.toLowerCase().includes('iscrizione')
+) {
+  chat.innerHTML += `
+    <div class="bot-row">
+      <div class="neo-avatar small">N</div>
+
+      <div class="message bot">
+        Se vuoi, puoi lasciarmi i tuoi dati e ti mandiamo le informazioni più adatte al tuo caso.
+
+        <div class="lead-form">
+          <input id="leadName" type="text" placeholder="Nome">
+
+          <input id="leadEmail" type="email" placeholder="Email">
+
+          <input id="leadPhone" type="tel" placeholder="Telefono">
+
+          <button onclick="sendLead()">
+            Invia i miei dati
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}
 
   chat.scrollTop = chat.scrollHeight;
 }
