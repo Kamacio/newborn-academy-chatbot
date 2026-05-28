@@ -489,32 +489,31 @@
             <div class="message bot">
               Se vuoi, puoi lasciarmi i tuoi dati e ti mandiamo le informazioni più adatte al tuo caso.
 
-              <div class="lead-form">
-                <input 
-  type="text" 
-  id="leadName" 
-  placeholder="Il tuo nome"
-  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
->
+              <div class="lead-form" onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }">
 
-                <input 
-  type="email" 
-  id="leadEmail" 
-  placeholder="La tua email"
-  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
->
+  <input
+    type="text"
+    id="leadName"
+    placeholder="Il tuo nome"
+  >
 
-                <input 
-  type="tel" 
-  id="leadPhone" 
-  placeholder="Telefono"
-  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
->
+  <input
+    type="email"
+    id="leadEmail"
+    placeholder="La tua email"
+  >
 
-                <button type="button" onclick="sendLead()">
-  Invia
-</button>
-              </div>
+  <input
+    type="tel"
+    id="leadPhone"
+    placeholder="Telefono"
+  >
+
+  <button type="button" onclick="sendLead()">
+    Invia
+  </button>
+
+</div>
             </div>
           </div>
         `;
