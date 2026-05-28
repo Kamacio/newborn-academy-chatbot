@@ -1,3 +1,4 @@
+```js
 export const knowledgeBase = `
 IDENTITÀ
 
@@ -198,7 +199,6 @@ La formazione business può includere:
 - organizzazione attività
 - gestione contatti
 - strategie di acquisizione clienti
-
 
 PERCORSO FORMATIVO 2026
 
