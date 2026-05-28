@@ -512,9 +512,6 @@ try {
 
 const typing = document.getElementById('typing');
 if (typing) typing.remove();
-
-  const data = await response.json();
-document.getElementById('typing').remove();
   conversation.push({
     role: 'assistant',
     content: data.reply
