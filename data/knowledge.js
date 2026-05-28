@@ -301,20 +301,6 @@ La scuola dedica molta attenzione:
 - alla continuità lavorativa nel tempo
 ```
 
-FILOSOFIA DELLA SCUOLA
-
-La Newborn Academy non è pensata per “collezionare immagini”.
-
-L’obiettivo è aiutare i fotografi a costruire uno studio che funzioni davvero, in modo professionale, sostenibile ed etico.
-
-La scuola dedica molta attenzione:
-- alla sicurezza del neonato
-- alla sostenibilità del business
-- alla gestione clienti
-- alla costruzione di un workflow reale
-- alla continuità lavorativa nel tempo
-```
-
 CERTIFICAZIONE SICUREZZA NEWBORN
 
 La sicurezza del neonato è una parte fondamentale della formazione.
