@@ -332,6 +332,11 @@ async function sendMessage() {
   const chat = document.getElementById('chat');
 
   const text = input.value.trim();
+  const emailMatch = text.match(
+  /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i
+);
+
+const detectedEmail = emailMatch ? emailMatch[0] : null;
 const now = new Date().toLocaleTimeString('it-IT', {
   hour: '2-digit',
   minute: '2-digit'
@@ -361,7 +366,8 @@ notifyTimeout = setTimeout(() => {
     body: JSON.stringify({
       conversation: formattedConversation,
       page: window.location.href,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      email: detectedEmail
     })
   });
 
