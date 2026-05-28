@@ -289,6 +289,37 @@ button {
 
     const conversation = [];
     let notifyTimeout;
+    function hasLeadIntent(text) {
+
+  const normalized = text.toLowerCase();
+
+  const intentWords = [
+    'prezz',
+    'cost',
+    'info',
+    'informaz',
+    'iscriv',
+    'chiam',
+    'contatt',
+    'partecip',
+    'corso',
+    'percors',
+    'programma',
+    'dettagli',
+    'disponibil',
+    'prenot',
+    'iniziar',
+    'partire',
+    'coaching',
+    'academy',
+    'lezioni',
+    'workshop'
+  ];
+
+  return intentWords.some(word =>
+    normalized.includes(word)
+  );
+}
 window.onload = function() {
 
   const chat = document.getElementById('chat');
@@ -468,13 +499,7 @@ document.getElementById('typing').remove();
     </div>
   </div>
 `;
-  if (
-  text.toLowerCase().includes('prezzo') ||
-  text.toLowerCase().includes('costo') ||
-  text.toLowerCase().includes('informazioni') ||
-  text.toLowerCase().includes('chiamata') ||
-  text.toLowerCase().includes('iscrizione')
-) {
+  if (hasLeadIntent(text)) {
   chat.innerHTML += `
     <div class="bot-row">
       <div class="neo-avatar small">N</div>
