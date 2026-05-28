@@ -151,7 +151,10 @@ window.onload = function() {
     </div>
   `;
 
+  setTimeout(() => {
   chat.innerHTML += welcomeMessage;
+  chat.scrollTop = chat.scrollHeight;
+}, 1200);
 
   conversation.push({
     role: 'assistant',
