@@ -499,7 +499,7 @@ document.getElementById('typing').remove();
     </div>
   </div>
 `;
-  if (hasLeadIntent(text)) {
+  if (hasLeadIntent(text) && !document.querySelector('.lead-form')) {
   chat.innerHTML += `
     <div class="bot-row">
       <div class="neo-avatar small">N</div>
