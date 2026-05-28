@@ -210,10 +210,10 @@ async function sendMessage() {
   });
 
   chat.innerHTML += `
-    <div class="message user">
-      <strong>Tu:</strong> ${text}
-    </div>
-  `;
+  <div class="message user">
+    ${text}
+  </div>
+`;
 
   input.value = '';
 const typingMessage = document.createElement('div');
@@ -246,10 +246,10 @@ document.getElementById('typing').remove();
   });
 
   chat.innerHTML += `
-    <div class="message bot">
-      <strong>NEO:</strong> ${data.reply}
-    </div>
-  `;
+  <div class="message bot">
+    ${data.reply}
+  </div>
+`;
 
   chat.scrollTop = chat.scrollHeight;
 }
