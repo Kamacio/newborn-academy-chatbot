@@ -60,6 +60,19 @@
   font-weight: bold;
   font-size: 18px;
 }
+    .bot-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.neo-avatar.small {
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
     #chat {
   flex: 1;
   overflow-y: auto;
@@ -246,8 +259,12 @@ document.getElementById('typing').remove();
   });
 
   chat.innerHTML += `
-  <div class="message bot">
-    ${data.reply}
+  <div class="bot-row">
+    <div class="neo-avatar small">N</div>
+
+    <div class="message bot">
+      ${data.reply}
+    </div>
   </div>
 `;
 
