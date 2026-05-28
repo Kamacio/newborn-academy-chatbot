@@ -473,6 +473,9 @@ typingMessage.innerHTML = `
 chat.appendChild(typingMessage);
 
 chat.scrollTop = chat.scrollHeight;
+  let data;
+
+try {
   const response = await fetch('/api/chat', {
     method: 'POST',
     headers: {
@@ -482,6 +485,32 @@ chat.scrollTop = chat.scrollHeight;
       messages: conversation
     })
   });
+
+  data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.error || 'Errore API');
+  }
+
+} catch (error) {
+  console.error('Errore chatbot:', error);
+
+  const typing = document.getElementById('typing');
+  if (typing) typing.remove();
+
+  chat.innerHTML += `
+    <div class="bot-row">
+      <div class="neo-avatar small">N</div>
+      <div class="message bot">
+        Mi dispiace, in questo momento ho avuto un problema tecnico. Riprova tra poco.
+      </div>
+    </div>
+  `;
+
+  return;
+}
+
+document.getElementById('typing').remove();
 
   const data = await response.json();
 document.getElementById('typing').remove();
