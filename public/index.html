@@ -541,7 +541,12 @@ document.getElementById('typing').remove();
   chat.scrollTop = chat.scrollHeight;
 }
     function sendLead() {
+const button = document.querySelector('.lead-form button');
 
+if (button) {
+  button.disabled = true;
+  button.innerText = 'Invio in corso...';
+}
   const name = document.getElementById('leadName').value.trim();
   const email = document.getElementById('leadEmail').value.trim();
   const phone = document.getElementById('leadPhone').value.trim();
