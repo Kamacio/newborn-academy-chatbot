@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -164,7 +163,7 @@
   <script>
     const conversation = [];
     let notifyTimeout;
-    let leadSent = false;
+    let leadSent = false; // GUARD: evita che sendLead() venga eseguita due volte
 
     function hasLeadIntent(text) {
       const normalized = text.toLowerCase();
@@ -176,6 +175,7 @@
       return intentWords.some(word => normalized.includes(word));
     }
 
+    // Ritorna il markup del form con onkeydown su ogni singolo input
     function leadFormHTML() {
       const handler = "if(event.key==='Enter'){event.preventDefault();sendLead();}";
       return `
@@ -214,6 +214,7 @@
         `;
         chat.appendChild(typingMessage);
         chat.scrollTop = chat.scrollHeight;
+
         setTimeout(() => {
           document.getElementById('welcomeTyping').remove();
           chat.innerHTML += welcomeMessage;
@@ -304,7 +305,7 @@
       `;
 
       if (hasLeadIntent(text) && !document.querySelector('.lead-form')) {
-        leadSent = false;
+        leadSent = false; // reset per ogni nuova istanza del form
         chat.innerHTML += `
           <div class="bot-row">
             <div class="neo-avatar small">N</div>
@@ -320,6 +321,7 @@
     }
 
     function sendLead() {
+      // GUARD: impedisce doppia esecuzione (es. onkeydown + click simultanei)
       if (leadSent) return;
       leadSent = true;
 
@@ -327,6 +329,7 @@
       const emailEl = document.getElementById('leadEmail');
       const phoneEl = document.getElementById('leadPhone');
 
+      // Sicurezza extra: se gli elementi non esistono, reset e uscita
       if (!nameEl || !emailEl || !phoneEl) {
         leadSent = false;
         return;
@@ -377,6 +380,7 @@
       document.getElementById('chat').scrollTop = document.getElementById('chat').scrollHeight;
     }
 
+    // Unico listener per il campo messaggio principale
     document.getElementById('message').addEventListener('keydown', function(event) {
       if (event.key === 'Enter') {
         event.preventDefault();
