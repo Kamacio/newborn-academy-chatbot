@@ -565,27 +565,33 @@ if (button) {
     })
     .join('\n\n');
 
- fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    name: name,
-    email: email,
-    phone: phone,
-    conversation: formattedConversation,
-    page: window.location.href,
-    timestamp: new Date().toISOString(),
-    lead_form: true
+ setTimeout(() => {
+
+  
+
+  fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      phone: phone,
+      conversation: formattedConversation,
+      page: window.location.href,
+      timestamp: new Date().toISOString(),
+      lead_form: true
+    })
   })
-})
-.then(res => {
-  console.log('Lead inviato', res.status);
-})
-.catch(err => {
-  console.error('Errore invio lead:', err);
-});
+  .then(res => {
+    console.log('Lead inviato', res.status);
+  })
+  .catch(err => {
+    console.error('Errore invio lead:', err);
+  });
+
+}, 1500);
 
   const form = document.querySelector('.lead-form');
 
