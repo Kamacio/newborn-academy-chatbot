@@ -8,71 +8,96 @@
 
   <style>
     body {
-      margin: 0;
-      padding: 40px;
-      background: #111;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-    }
+  margin: 0;
+  background: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
 
     .chat-container {
-      width: 100%;
-      max-width: 700px;
-      background: #1c1c1c;
-      border-radius: 16px;
-      padding: 20px;
-    }
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #111;
+}
 
     h1 {
       margin-top: 0;
     }
+.header {
+  padding: 18px;
+  background: #111;
+  border-bottom: 1px solid #222;
+}
 
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  opacity: 0.7;
+  font-size: 14px;
+}
     #chat {
-      height: 400px;
-      overflow-y: auto;
-      background: #000;
-      border-radius: 12px;
-      padding: 15px;
-      margin-bottom: 15px;
-    }
+  flex: 1;
+  overflow-y: auto;
+  background: #000;
+  padding: 20px;
+}
 
     .message {
-      margin-bottom: 15px;
-      line-height: 1.5;
-    }
+  padding: 12px 16px;
+  border-radius: 18px;
+  margin-bottom: 12px;
+  max-width: 80%;
+  line-height: 1.5;
+}
 
-    .user {
-      color: #7dd3fc;
-    }
+.user {
+  background: #1f6feb;
+  color: white;
+  margin-left: auto;
+}
 
-    .bot {
-      color: white;
-    }
+.bot {
+  background: #222;
+  color: white;
+}
 
     .input-row {
-      display: flex;
-      gap: 10px;
-    }
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: #111;
+  position: sticky;
+  bottom: 0;
+}
 
     input {
-      flex: 1;
-      padding: 14px;
-      border-radius: 10px;
-      border: none;
-      font-size: 16px;
-    }
+  flex: 1;
+  padding: 16px;
+  border-radius: 30px;
+  border: none;
+  background: #222;
+  color: white;
+  font-size: 16px;
+}
 
     button {
-      padding: 14px 20px;
-      border: none;
-      border-radius: 10px;
-      background: white;
-      color: black;
-      font-weight: bold;
-      cursor: pointer;
-    }
+  padding: 14px 22px;
+  border: none;
+  border-radius: 30px;
+  background: #ffffff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
   </style>
 </head>
 
@@ -80,8 +105,13 @@
 
   <div class="chat-container">
 
-    <h1>Newborn Academy Assistant</h1>
-
+    
+<div class="header">
+  <div>
+    <h1>NEO</h1>
+    <p>Assistente Newborn Academy</p>
+  </div>
+</div>
     <div id="chat"></div>
 
     <div class="input-row">
