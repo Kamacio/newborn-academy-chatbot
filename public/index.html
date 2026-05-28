@@ -265,6 +265,7 @@ button {
   <script>
 
     const conversation = [];
+    let notifyTimeout;
 window.onload = function() {
 
   const chat = document.getElementById('chat');
@@ -348,18 +349,23 @@ const formattedConversation = conversation
   })
   .join('\n\n');
 
-fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    message: text,
-    conversation: formattedConversation,
-    page: window.location.href,
-    timestamp: new Date().toISOString()
-  })
-});
+clearTimeout(notifyTimeout);
+
+notifyTimeout = setTimeout(() => {
+
+  fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      conversation: formattedConversation,
+      page: window.location.href,
+      timestamp: new Date().toISOString()
+    })
+  });
+
+}, 60000);
   chat.innerHTML += `
   <div class="message user">
     ${text}
