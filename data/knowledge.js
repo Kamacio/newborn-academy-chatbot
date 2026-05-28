@@ -201,27 +201,39 @@ La formazione business può includere:
 - strategie di acquisizione clienti
 
 ```txt
+
+```txt id="3q9nzl"
 PERCORSO FORMATIVO 2026
 
-La Newborn Academy propone un nuovo percorso formativo di 3 mesi dedicato ai fotografi di famiglia.
+La Newborn Academy propone un percorso formativo dedicato ai fotografi di famiglia, pensato per aiutare fotografi principianti e intermedi a costruire una professione vera, sostenibile e strutturata.
 
-Il percorso nasce per aiutare fotografi principianti e intermedi a costruire una professione vera, sostenibile e strutturata.
-
-Il focus del percorso è:
+Il percorso unisce:
 - tecnica
-- business
 - sicurezza
+- business
 - workflow
 - gestione studio
 - marketing
 
-Il percorso include:
+La struttura della scuola è pensata in modo flessibile.
+
+Gli studenti possono iniziare fin da subito a guardare le lezioni registrate e ad accedere al materiale formativo.
+
+Non esiste quindi un “inizio rigido” legato esclusivamente alle lezioni online.
+
+La parte centrale del percorso si sviluppa invece attorno ai workshop dal vivo e al percorso guidato di circa 3-4 mesi che accompagna gli studenti durante la formazione.
+
+COSA INCLUDE IL PERCORSO
+
+Il percorso può includere:
 - lezioni registrate
-- 3 masterclass online di gruppo
-- 3 audit individuali 1:1 online
-- 2 workshop dal vivo
+- workshop dal vivo
+- masterclass online di gruppo
+- audit individuali 1:1 online
 - community privata
 - supporto
+- formazione tecnica
+- formazione business
 
 MODULI PRINCIPALI
 
@@ -233,27 +245,38 @@ Lezioni registrate:
 - Family al tramonto
 - Post-produzione
 - Instagram per fotografi
-- Marketing (opzionale)
+- Marketing e Business
 
 WORKSHOP DAL VIVO
 
-La formazione include due workshop dal vivo.
+Il percorso si apre con un workshop maternity glamour dal vivo:
 
-Workshop maternity:
-- Aversa
 - 17 settembre 2026
+- Aversa
 
-Workshop newborn, bebè e family:
+Questo workshop è dedicato:
+- alla fotografia maternity
+- alla conoscenza dei partecipanti
+- all’allineamento degli obiettivi
+- alla preparazione del percorso formativo
+
+La conclusione del percorso avviene invece con il workshop finale dal vivo dedicato a:
+- newborn
+- bebè
+- family
+
+Date workshop finale:
+- 14 gennaio 2027
+- 15 gennaio 2027
 - Torino
-- 15-16 gennaio 2027
-
-I workshop sono pratici e guidati direttamente da Mauro Aluffi e Angelica Casaccia.
 
 Durante i workshop gli studenti:
 - lavorano realmente sul set
-- consolidano la tecnica
-- migliorano workflow e sicurezza
+- consolidano tecnica e workflow
+- migliorano la sicurezza
 - possono arricchire il portfolio professionale
+
+I workshop sono guidati direttamente da Mauro Aluffi e Angelica Casaccia.
 
 PREZZI
 
@@ -266,6 +289,20 @@ Percorso Completo + Marketing e Business:
 - 3500€ IVA compresa
 
 È disponibile il pagamento rateale.
+
+FILOSOFIA DELLA SCUOLA
+
+La Newborn Academy non è pensata per “collezionare immagini”.
+
+L’obiettivo è aiutare i fotografi a costruire uno studio che funzioni davvero, in modo professionale, sostenibile ed etico.
+
+La scuola dedica molta attenzione:
+- alla sicurezza del neonato
+- alla sostenibilità del business
+- alla gestione clienti
+- alla costruzione di un workflow reale
+- alla continuità lavorativa nel tempo
+```
 
 FILOSOFIA DELLA SCUOLA
 
