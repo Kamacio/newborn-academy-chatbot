@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -8,252 +9,252 @@
 
   <style>
     body {
-  margin: 0;
-  background: #000;
-  color: white;
-  font-family: Arial, sans-serif;
-  height: 100vh;
-  overflow: hidden;
-}
+      margin: 0;
+      background: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
 
     .chat-container {
-  width: 100%;
-  max-width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: #111;
-}
+      width: 100%;
+      max-width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #111;
+    }
 
     h1 {
       margin-top: 0;
     }
-.header {
-  padding: 20px;
-  background:
-    radial-gradient(circle at top left, rgba(107,143,113,0.75), transparent 35%),
-    radial-gradient(circle at top right, rgba(107,143,113,0.18), transparent 30%),
-    linear-gradient(135deg, #1b1b1b 0%, #050505 100%);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  backdrop-filter: blur(18px);
-  box-shadow:
-    inset 0 -1px 0 rgba(255,255,255,0.04),
-    0 10px 40px rgba(0,0,0,0.45);
-  position: relative;
-  overflow: hidden;
-}
-.header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      120deg,
-      transparent 0%,
-      rgba(255,255,255,0.03) 45%,
-      transparent 100%
-    );
-  pointer-events: none;
-}
-.header h1 {
-  margin: 0;
-  font-size: 24px;
-}
 
-.header p {
-  margin: 5px 0 0;
-  opacity: 0.7;
-  font-size: 14px;
-}
+    .header {
+      padding: 20px;
+      background:
+        radial-gradient(circle at top left, rgba(107,143,113,0.75), transparent 35%),
+        radial-gradient(circle at top right, rgba(107,143,113,0.18), transparent 30%),
+        linear-gradient(135deg, #1b1b1b 0%, #050505 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      backdrop-filter: blur(18px);
+      box-shadow:
+        inset 0 -1px 0 rgba(255,255,255,0.04),
+        0 10px 40px rgba(0,0,0,0.45);
+      position: relative;
+      overflow: hidden;
+    }
 
-.neo-avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background-image: url('/neo-avatar.png');
-  background-size: cover;
-  background-position: center;
-  flex-shrink: 0;
-  font-size: 0;
-  box-shadow:
-  0 0 0 2px rgba(107,143,113,0.15),
-  0 0 35px rgba(107,143,113,0.45);
-}
+    .header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          120deg,
+          transparent 0%,
+          rgba(255,255,255,0.03) 45%,
+          transparent 100%
+        );
+      pointer-events: none;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .header p {
+      margin: 5px 0 0;
+      opacity: 0.7;
+      font-size: 14px;
+    }
+
+    .neo-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background-image: url('/neo-avatar.png');
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+      font-size: 0;
+      box-shadow:
+        0 0 0 2px rgba(107,143,113,0.15),
+        0 0 35px rgba(107,143,113,0.45);
+    }
+
     .bot-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 12px;
-}
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
 
-.neo-avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background-image: url('/neo-avatar.png');
-  background-size: cover;
-  background-position: center;
-  flex-shrink: 0;
-  font-size: 0;
-}
     #chat {
-  flex: 1;
-  overflow-y: auto;
-  background: #000;
-  padding: 20px;
-}
+      flex: 1;
+      overflow-y: auto;
+      background: #000;
+      padding: 20px;
+    }
 
     .message {
-  padding: 13px 16px;
-  border-radius: 20px;
-  margin-bottom: 6px;
-  max-width: 78%;
-  line-height: 1.5;
-  animation: fadeInUp 0.25s ease;
-  word-wrap: break-word;
-}
+      padding: 13px 16px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+      max-width: 78%;
+      line-height: 1.5;
+      animation: fadeInUp 0.25s ease;
+      word-wrap: break-word;
+    }
 
-.user {
-  background: #6b8f71;
-  color: white;
-  margin-left: auto;
-  border-bottom-right-radius: 6px;
-}
+    .user {
+      background: #6b8f71;
+      color: white;
+      margin-left: auto;
+      border-bottom-right-radius: 6px;
+    }
 
-.bot {
-  background: #222;
-  color: white;
-  border-bottom-left-radius: 6px;
-}
-.time {
-  display: block;
-  font-size: 11px;
-  opacity: 0.55;
-  margin-top: 6px;
-  text-align: right;
-}
-.typing-dots {
-  display: inline-flex;
-  gap: 4px;
-  align-items: center;
-}
+    .bot {
+      background: #222;
+      color: white;
+      border-bottom-left-radius: 6px;
+    }
 
-.typing-dots span {
-  width: 6px;
-  height: 6px;
-  background: white;
-  border-radius: 50%;
-  opacity: 0.35;
-  animation: typingPulse 1.2s infinite ease-in-out;
-}
+    .time {
+      display: block;
+      font-size: 11px;
+      opacity: 0.55;
+      margin-top: 6px;
+      text-align: right;
+    }
 
-.typing-dots span:nth-child(2) {
-  animation-delay: 0.2s;
-}
+    .typing-dots {
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+    }
 
-.typing-dots span:nth-child(3) {
-  animation-delay: 0.4s;
-}
+    .typing-dots span {
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.35;
+      animation: typingPulse 1.2s infinite ease-in-out;
+    }
 
-@keyframes typingPulse {
-  0%, 80%, 100% {
-    opacity: 0.25;
-    transform: translateY(0);
-  }
-  40% {
-    opacity: 1;
-    transform: translateY(-3px);
-  }
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    .typing-dots span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .typing-dots span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes typingPulse {
+      0%, 80%, 100% {
+        opacity: 0.25;
+        transform: translateY(0);
+      }
+      40% {
+        opacity: 1;
+        transform: translateY(-3px);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .quick-actions {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding: 0 15px 10px;
-  background: #111;
-}
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 0 15px 10px;
+      background: #111;
+    }
 
-.quick-actions button {
-  white-space: nowrap;
-  background: #1d1d1d;
-  color: white;
-  border: 1px solid #333;
-  padding: 10px 14px;
-  border-radius: 20px;
-  font-size: 14px;
-  cursor: pointer;
-  flex-shrink: 0;
-}
+    .quick-actions button {
+      white-space: nowrap;
+      background: #1d1d1d;
+      color: white;
+      border: 1px solid #333;
+      padding: 10px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
 
-.quick-actions button:hover {
-  background: #2a2a2a;
-}
+    .quick-actions button:hover {
+      background: #2a2a2a;
+    }
+
     .lead-form {
-  background: #181818;
-  border: 1px solid #2a2a2a;
-  border-radius: 18px;
-  padding: 14px;
-  margin-top: 10px;
-}
+      background: #181818;
+      border: 1px solid #2a2a2a;
+      border-radius: 18px;
+      padding: 14px;
+      margin-top: 10px;
+    }
 
-.lead-form input {
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 10px;
-  border-radius: 12px;
-  padding: 12px;
-  background: #222;
-  color: white;
-  border: 1px solid #333;
-}
+    .lead-form input {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      padding: 12px;
+      background: #222;
+      color: white;
+      border: 1px solid #333;
+    }
 
-.lead-form button {
-  width: 100%;
-  border-radius: 12px;
-}
+    .lead-form button {
+      width: 100%;
+      border-radius: 12px;
+    }
+
     .input-row {
-  display: flex;
-  gap: 10px;
-  padding: 15px;
-  background: #111;
-  position: sticky;
-  bottom: 0;
-}
+      display: flex;
+      gap: 10px;
+      padding: 15px;
+      background: #111;
+      position: sticky;
+      bottom: 0;
+    }
 
     input {
-  flex: 1;
-  padding: 16px;
-  border-radius: 30px;
-  border: none;
-  background: #222;
-  color: white;
-  font-size: 16px;
-  min-width: 0;
-}
+      flex: 1;
+      padding: 16px;
+      border-radius: 30px;
+      border: none;
+      background: #222;
+      color: white;
+      font-size: 16px;
+      min-width: 0;
+    }
 
-button {
-  padding: 14px 22px;
-  border: none;
-  border-radius: 30px;
-  background: #ffffff;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
-  flex-shrink: 0;
-}
+    button {
+      padding: 14px 22px;
+      border: none;
+      border-radius: 30px;
+      background: #ffffff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
   </style>
 </head>
 
@@ -261,14 +262,14 @@ button {
 
   <div class="chat-container">
 
-    
-<div class="header">
-  <div class="neo-avatar">N</div>
-  <div>
-    <h1>NEO</h1>
-    <p>Assistente Newborn Academy</p>
-  </div>
-</div>
+    <div class="header">
+      <div class="neo-avatar">N</div>
+      <div>
+        <h1>NEO</h1>
+        <p>Assistente Newborn Academy</p>
+      </div>
+    </div>
+
     <div id="chat"></div>
 
     <div class="input-row">
@@ -278,7 +279,7 @@ button {
         placeholder="Scrivi un messaggio..."
       />
 
-      <button onclick="sendMessage()">
+      <button type="button" onclick="sendMessage()">
         Invia
       </button>
     </div>
@@ -286,309 +287,309 @@ button {
   </div>
 
   <script>
-
     const conversation = [];
     let notifyTimeout;
+
     function hasLeadIntent(text) {
+      const normalized = text.toLowerCase();
 
-  const normalized = text.toLowerCase();
+      const intentWords = [
+        'prezz',
+        'cost',
+        'info',
+        'informaz',
+        'iscriv',
+        'chiam',
+        'contatt',
+        'partecip',
+        'corso',
+        'percors',
+        'programma',
+        'dettagli',
+        'disponibil',
+        'prenot',
+        'iniziar',
+        'partire',
+        'coaching',
+        'academy',
+        'lezioni',
+        'workshop'
+      ];
 
-  const intentWords = [
-    'prezz',
-    'cost',
-    'info',
-    'informaz',
-    'iscriv',
-    'chiam',
-    'contatt',
-    'partecip',
-    'corso',
-    'percors',
-    'programma',
-    'dettagli',
-    'disponibil',
-    'prenot',
-    'iniziar',
-    'partire',
-    'coaching',
-    'academy',
-    'lezioni',
-    'workshop'
-  ];
+      return intentWords.some(word => normalized.includes(word));
+    }
 
-  return intentWords.some(word =>
-    normalized.includes(word)
-  );
-}
-window.onload = function() {
+    window.onload = function() {
+      const chat = document.getElementById('chat');
 
-  const chat = document.getElementById('chat');
-
-  const welcomeMessage = `
-  <div class="bot-row">
-    <div class="neo-avatar small">N</div>
-
-    <div class="message bot">
-      <strong>NEO:</strong><br><br>
-
-      Ciao! Sono NEO 👋<br>
-      Sono l’assistente virtuale della Newborn Academy.<br><br>
-
-      Come posso aiutarti?
-    </div>
-  </div>
-`;
-
-  setTimeout(() => {
-
-  const typingMessage = document.createElement('div');
-
-  typingMessage.id = 'welcomeTyping';
-
-  typingMessage.innerHTML = `
-    <div class="bot-row">
-  <div class="neo-avatar small">N</div>
-
-  <div class="message bot">
-    <div class="typing-dots">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-</div>
-  `;
-
-  chat.appendChild(typingMessage);
-
-  chat.scrollTop = chat.scrollHeight;
-
-  setTimeout(() => {
-
-    document.getElementById('welcomeTyping').remove();
-
-    chat.innerHTML += welcomeMessage;
-
-    chat.scrollTop = chat.scrollHeight;
-
-    conversation.push({
-      role: 'assistant',
-      content: 'Messaggio iniziale inviato'
-    });
-
-  }, 1800);
-
-}, 1000);
-
-};
-async function sendMessage() {
-  const input = document.getElementById('message');
-  const chat = document.getElementById('chat');
-
-  const text = input.value.trim();
-  const emailMatch = text.match(
-  /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i
-);
-
-const detectedEmail = emailMatch ? emailMatch[0] : null;
-  const phoneMatch = text.match(
-  /(\+39\s?)?(\d[\s-]?){8,15}/
-);
-
-const detectedPhone = phoneMatch
-  ? phoneMatch[0]
-      .replace(/\s/g, '')
-      .replace(/-/g, '')
-  : null;
-  const nameMatch = text.match(
-  /(mi chiamo|sono)\s+([A-Za-zÀ-ÿ]+)/i
-);
-
-const detectedName = nameMatch
-  ? nameMatch[2]
-  : null;
-const now = new Date().toLocaleTimeString('it-IT', {
-  hour: '2-digit',
-  minute: '2-digit'
-});
-  if (!text) return;
-
-  conversation.push({
-    role: 'user',
-    content: text
-  });
-const formattedConversation = conversation
-  .map(msg => {
-    const speaker = msg.role === 'assistant' ? 'NEO' : 'UTENTE';
-    return `${speaker}: ${msg.content}`;
-  })
-  .join('\n\n');
-
-clearTimeout(notifyTimeout);
-
-notifyTimeout = setTimeout(() => {
-
-  fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      conversation: formattedConversation,
-      page: window.location.href,
-      timestamp: new Date().toISOString(),
-      email: detectedEmail,
-      phone: detectedPhone,
-name: detectedName
-    })
-  });
-
-}, 1000);
-  chat.innerHTML += `
-  <div class="message user">
-    ${text}
-    <span class="time">${now}</span>
-  </div>
-`;
-
-  input.value = '';
-const typingMessage = document.createElement('div');
-
-typingMessage.id = 'typing';
-
-typingMessage.innerHTML = `
-  <div class="bot-row">
-    <div class="neo-avatar small">N</div>
-
-    <div class="message bot">
-      <div class="typing-dots">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-    </div>
-  </div>
-`;
-
-chat.appendChild(typingMessage);
-
-chat.scrollTop = chat.scrollHeight;
-  const response = await fetch('/api/chat', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      messages: conversation
-    })
-  });
-
-  const data = await response.json();
-document.getElementById('typing').remove();
-  conversation.push({
-    role: 'assistant',
-    content: data.reply
-  });
-
-  chat.innerHTML += `
-  <div class="bot-row">
-    <div class="neo-avatar small">N</div>
-    <div class="message bot">
-      ${data.reply}
-      <span class="time">${now}</span>
-    </div>
-  </div>
-`;
-  if (hasLeadIntent(text)) {
-  chat.innerHTML += `
-    <div class="bot-row">
-      <div class="neo-avatar small">N</div>
-
-      <div class="message bot">
-        Se vuoi, puoi lasciarmi i tuoi dati e ti mandiamo le informazioni più adatte al tuo caso.
-
-        <div class="lead-form">
-          <input id="leadName" type="text" placeholder="Nome">
-
-          <input id="leadEmail" type="email" placeholder="Email">
-
-          <input id="leadPhone" type="tel" placeholder="Telefono">
-
-          <button onclick="sendLead()">
-            Invia i miei dati
-          </button>
+      const welcomeMessage = `
+        <div class="bot-row">
+          <div class="neo-avatar small">N</div>
+          <div class="message bot">
+            <strong>NEO:</strong><br><br>
+            Ciao! Sono NEO 👋<br>
+            Sono l’assistente virtuale della Newborn Academy.<br><br>
+            Come posso aiutarti?
+          </div>
         </div>
-      </div>
-    </div>
-  `;
-}
+      `;
 
-  chat.scrollTop = chat.scrollHeight;
-}
+      setTimeout(() => {
+        const typingMessage = document.createElement('div');
+        typingMessage.id = 'welcomeTyping';
+
+        typingMessage.innerHTML = `
+          <div class="bot-row">
+            <div class="neo-avatar small">N</div>
+            <div class="message bot">
+              <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        `;
+
+        chat.appendChild(typingMessage);
+        chat.scrollTop = chat.scrollHeight;
+
+        setTimeout(() => {
+          document.getElementById('welcomeTyping').remove();
+          chat.innerHTML += welcomeMessage;
+          chat.scrollTop = chat.scrollHeight;
+
+          conversation.push({
+            role: 'assistant',
+            content: 'Messaggio iniziale inviato'
+          });
+
+        }, 1800);
+
+      }, 1000);
+    };
+
+    async function sendMessage() {
+      const input = document.getElementById('message');
+      const chat = document.getElementById('chat');
+
+      const text = input.value.trim();
+
+      const emailMatch = text.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i);
+      const detectedEmail = emailMatch ? emailMatch[0] : null;
+
+      const phoneMatch = text.match(/(\+39\s?)?(\d[\s-]?){8,15}/);
+      const detectedPhone = phoneMatch
+        ? phoneMatch[0].replace(/\s/g, '').replace(/-/g, '')
+        : null;
+
+      const nameMatch = text.match(/(mi chiamo|sono)\s+([A-Za-zÀ-ÿ]+)/i);
+      const detectedName = nameMatch ? nameMatch[2] : null;
+
+      const now = new Date().toLocaleTimeString('it-IT', {
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+
+      if (!text) return;
+
+      conversation.push({
+        role: 'user',
+        content: text
+      });
+
+      const formattedConversation = conversation
+        .map(msg => {
+          const speaker = msg.role === 'assistant' ? 'NEO' : 'UTENTE';
+          return `${speaker}: ${msg.content}`;
+        })
+        .join('\n\n');
+
+      clearTimeout(notifyTimeout);
+
+      notifyTimeout = setTimeout(() => {
+        fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            conversation: formattedConversation,
+            page: window.location.href,
+            timestamp: new Date().toISOString(),
+            email: detectedEmail,
+            phone: detectedPhone,
+            name: detectedName
+          })
+        });
+      }, 1000);
+
+      chat.innerHTML += `
+        <div class="message user">
+          ${text}
+          <span class="time">${now}</span>
+        </div>
+      `;
+
+      input.value = '';
+
+      const typingMessage = document.createElement('div');
+      typingMessage.id = 'typing';
+
+      typingMessage.innerHTML = `
+        <div class="bot-row">
+          <div class="neo-avatar small">N</div>
+          <div class="message bot">
+            <div class="typing-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      chat.appendChild(typingMessage);
+      chat.scrollTop = chat.scrollHeight;
+
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          messages: conversation
+        })
+      });
+
+      const data = await response.json();
+
+      const typing = document.getElementById('typing');
+      if (typing) typing.remove();
+
+      conversation.push({
+        role: 'assistant',
+        content: data.reply
+      });
+
+      chat.innerHTML += `
+        <div class="bot-row">
+          <div class="neo-avatar small">N</div>
+          <div class="message bot">
+            ${data.reply}
+            <span class="time">${now}</span>
+          </div>
+        </div>
+      `;
+
+      if (hasLeadIntent(text) && !document.querySelector('.lead-form')) {
+        chat.innerHTML += `
+          <div class="bot-row">
+            <div class="neo-avatar small">N</div>
+            <div class="message bot">
+              Se vuoi, puoi lasciarmi i tuoi dati e ti mandiamo le informazioni più adatte al tuo caso.
+
+              <div class="lead-form">
+                <input
+                  id="leadName"
+                  type="text"
+                  placeholder="Nome"
+                  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
+                >
+
+                <input
+                  id="leadEmail"
+                  type="email"
+                  placeholder="Email"
+                  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
+                >
+
+                <input
+                  id="leadPhone"
+                  type="tel"
+                  placeholder="Telefono"
+                  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
+                >
+
+                <button type="button" onclick="sendLead()">
+                  Invia i miei dati
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      chat.scrollTop = chat.scrollHeight;
+    }
+
     function sendLead() {
+      const name = document.getElementById('leadName').value.trim();
+      const email = document.getElementById('leadEmail').value.trim();
+      const phone = document.getElementById('leadPhone').value.trim();
 
-  const name = document.getElementById('leadName').value.trim();
-  const email = document.getElementById('leadEmail').value.trim();
-  const phone = document.getElementById('leadPhone').value.trim();
+      const leadText = `Nome: ${name || '-'}\nEmail: ${email || '-'}\nTelefono: ${phone || '-'}`;
 
-  const leadText = `Nome: ${name || '-'}\nEmail: ${email || '-'}\nTelefono: ${phone || '-'}`;
+      conversation.push({
+        role: 'user',
+        content: leadText
+      });
 
-  conversation.push({
-    role: 'user',
-    content: leadText
-  });
+      const formattedConversation = conversation
+        .map(msg => {
+          const speaker = msg.role === 'assistant' ? 'NEO' : 'UTENTE';
+          return `${speaker}: ${msg.content}`;
+        })
+        .join('\n\n');
 
-  const formattedConversation = conversation
-    .map(msg => {
-      const speaker = msg.role === 'assistant' ? 'NEO' : 'UTENTE';
-      return `${speaker}: ${msg.content}`;
-    })
-    .join('\n\n');
+      fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone: phone,
+          conversation: formattedConversation,
+          page: window.location.href,
+          timestamp: new Date().toISOString(),
+          lead_form: true
+        })
+      });
 
-  fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      name: name,
-      email: email,
-      phone: phone,
-      conversation: formattedConversation,
-      page: window.location.href,
-      timestamp: new Date().toISOString(),
-      lead_form: true
-    })
-  });
+      const form = document.querySelector('.lead-form');
 
-  const form = document.querySelector('.lead-form');
+      if (form) {
+        form.innerHTML = `
+          <div style="line-height:1.5;">
+            <strong>Dati inviati:</strong><br>
+            Nome: ${name || '-'}<br>
+            Email: ${email || '-'}<br>
+            Telefono: ${phone || '-'}<br><br>
+            Perfetto, grazie. Abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.<br><br>
+            Nel frattempo puoi continuare a farmi domande qui in chat.
+          </div>
+        `;
+      }
 
-  if (form) {
-    form.innerHTML = `
-      <div style="line-height:1.5;">
-        <strong>Dati inviati:</strong><br>
-        Nome: ${name || '-'}<br>
-        Email: ${email || '-'}<br>
-        Telefono: ${phone || '-'}<br><br>
-        Perfetto, grazie. Abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.<br><br>
-        Nel frattempo puoi continuare a farmi domande qui in chat.
-      </div>
-    `;
-  }
+      conversation.push({
+        role: 'assistant',
+        content: 'Grazie, abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.'
+      });
 
-  conversation.push({
-    role: 'assistant',
-    content: 'Grazie, abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.'
-  });
+      const chat = document.getElementById('chat');
+      chat.scrollTop = chat.scrollHeight;
+    }
 
-}
-document.getElementById('message').addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    event.preventDefault();
-    sendMessage();
-  }
-});
+    document.getElementById('message').addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        sendMessage();
+      }
+    });
   </script>
 
 </body>
 </html>
+```
