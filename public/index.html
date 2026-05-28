@@ -473,9 +473,6 @@ typingMessage.innerHTML = `
 chat.appendChild(typingMessage);
 
 chat.scrollTop = chat.scrollHeight;
-  let data;
-
-try {
   const response = await fetch('/api/chat', {
     method: 'POST',
     headers: {
@@ -486,32 +483,8 @@ try {
     })
   });
 
-  data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.error || 'Errore API');
-  }
-
-} catch (error) {
-  console.error('Errore chatbot:', error);
-
-  const typing = document.getElementById('typing');
-  if (typing) typing.remove();
-
-  chat.innerHTML += `
-    <div class="bot-row">
-      <div class="neo-avatar small">N</div>
-      <div class="message bot">
-        Mi dispiace, in questo momento ho avuto un problema tecnico. Riprova tra poco.
-      </div>
-    </div>
-  `;
-
-  return;
-}
-
-const typing = document.getElementById('typing');
-if (typing) typing.remove();
+  const data = await response.json();
+document.getElementById('typing').remove();
   conversation.push({
     role: 'assistant',
     content: data.reply
@@ -526,7 +499,7 @@ if (typing) typing.remove();
     </div>
   </div>
 `;
-  if (hasLeadIntent(text) && !document.querySelector('.lead-form')) {
+  if (hasLeadIntent(text)) {
   chat.innerHTML += `
     <div class="bot-row">
       <div class="neo-avatar small">N</div>
@@ -535,28 +508,13 @@ if (typing) typing.remove();
         Se vuoi, puoi lasciarmi i tuoi dati e ti mandiamo le informazioni più adatte al tuo caso.
 
         <div class="lead-form">
-          <input
-  id="leadName"
-  type="text"
-  placeholder="Nome"
-  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
->
+          <input id="leadName" type="text" placeholder="Nome">
 
-<input
-  id="leadEmail"
-  type="email"
-  placeholder="Email"
-  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
->
+          <input id="leadEmail" type="email" placeholder="Email">
 
-<input
-  id="leadPhone"
-  type="tel"
-  placeholder="Telefono"
-  onkeydown="if(event.key === 'Enter'){ event.preventDefault(); sendLead(); }"
->
+          <input id="leadPhone" type="tel" placeholder="Telefono">
 
-          <button type="button" onclick="sendLead()">
+          <button onclick="sendLead()">
             Invia i miei dati
           </button>
         </div>
@@ -568,22 +526,9 @@ if (typing) typing.remove();
   chat.scrollTop = chat.scrollHeight;
 }
     function sendLead() {
-const button = document.querySelector('.lead-form button');
-
-if (button) {
-  button.disabled = true;
-  button.innerText = 'Invio in corso...';
-}
   const name = document.getElementById('leadName').value.trim();
   const email = document.getElementById('leadEmail').value.trim();
   const phone = document.getElementById('leadPhone').value.trim();
-
-  const leadText = `Nome: ${name || '-'}\nEmail: ${email || '-'}\nTelefono: ${phone || '-'}`;
-
-  conversation.push({
-    role: 'user',
-    content: leadText
-  });
 
   const formattedConversation = conversation
     .map(msg => {
@@ -591,10 +536,6 @@ if (button) {
       return `${speaker}: ${msg.content}`;
     })
     .join('\n\n');
-
- setTimeout(() => {
-
-  
 
   fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
     method: 'POST',
@@ -610,36 +551,9 @@ if (button) {
       timestamp: new Date().toISOString(),
       lead_form: true
     })
-  })
-  .then(res => {
-    console.log('Lead inviato', res.status);
-  })
-  .catch(err => {
-    console.error('Errore invio lead:', err);
   });
 
-}, 1500);
-
-  const form = document.querySelector('.lead-form');
-
-  if (form) {
-  form.innerHTML = `
-    <div style="line-height:1.5;">
-      <strong>Dati inviati:</strong><br>
-      Nome: ${name || '-'}<br>
-      Email: ${email || '-'}<br>
-      Telefono: ${phone || '-'}<br><br>
-      Perfetto, grazie. Abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.<br><br>
-      Nel frattempo puoi continuare a farmi domande qui in chat.
-    </div>
-  `;
-}
-
-  conversation.push({
-    role: 'assistant',
-    content: 'Grazie, abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.'
-  });
-
+  alert('Perfetto, dati inviati!');
 }
 document.getElementById('message').addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
