@@ -1,4 +1,3 @@
-```js
 export const knowledgeBase = `
 IDENTITÀ
 
@@ -200,9 +199,7 @@ La formazione business può includere:
 - gestione contatti
 - strategie di acquisizione clienti
 
-```txt
 
-```txt id="3q9nzl"
 PERCORSO FORMATIVO 2026
 
 La Newborn Academy propone un percorso formativo dedicato ai fotografi di famiglia, pensato per aiutare fotografi principianti e intermedi a costruire una professione vera, sostenibile e strutturata.
