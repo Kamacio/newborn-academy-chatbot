@@ -526,9 +526,17 @@ document.getElementById('typing').remove();
   chat.scrollTop = chat.scrollHeight;
 }
     function sendLead() {
+
   const name = document.getElementById('leadName').value.trim();
   const email = document.getElementById('leadEmail').value.trim();
   const phone = document.getElementById('leadPhone').value.trim();
+
+  const leadText = `Nome: ${name || '-'}\nEmail: ${email || '-'}\nTelefono: ${phone || '-'}`;
+
+  conversation.push({
+    role: 'user',
+    content: leadText
+  });
 
   const formattedConversation = conversation
     .map(msg => {
@@ -553,7 +561,26 @@ document.getElementById('typing').remove();
     })
   });
 
-  alert('Perfetto, dati inviati!');
+  const form = document.querySelector('.lead-form');
+
+  if (form) {
+    form.innerHTML = `
+      <div style="line-height:1.5;">
+        <strong>Dati inviati:</strong><br>
+        Nome: ${name || '-'}<br>
+        Email: ${email || '-'}<br>
+        Telefono: ${phone || '-'}<br><br>
+        Perfetto, grazie. Abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.<br><br>
+        Nel frattempo puoi continuare a farmi domande qui in chat.
+      </div>
+    `;
+  }
+
+  conversation.push({
+    role: 'assistant',
+    content: 'Grazie, abbiamo ricevuto i tuoi dati e ti ricontatteremo con le informazioni più adatte al tuo caso.'
+  });
+
 }
 document.getElementById('message').addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
