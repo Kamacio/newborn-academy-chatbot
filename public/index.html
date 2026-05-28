@@ -131,7 +131,34 @@
   <script>
 
     const conversation = [];
+window.onload = function() {
 
+  const chat = document.getElementById('chat');
+
+  const welcomeMessage = `
+    <div class="message bot">
+      <strong>NEO:</strong><br><br>
+      Ciao! Sono NEO, l’assistente virtuale della Newborn Academy.<br><br>
+
+      Posso aiutarti a orientarti tra:
+      <br>• fotografia newborn
+      <br>• sicurezza
+      <br>• marketing
+      <br>• percorsi professionali
+      <br><br>
+
+      Tu a che punto sei oggi con la fotografia?
+    </div>
+  `;
+
+  chat.innerHTML += welcomeMessage;
+
+  conversation.push({
+    role: 'assistant',
+    content: 'Messaggio iniziale inviato'
+  });
+
+};
 async function sendMessage() {
   const input = document.getElementById('message');
   const chat = document.getElementById('chat');
