@@ -200,6 +200,87 @@ La formazione business può includere:
 - gestione contatti
 - strategie di acquisizione clienti
 
+```txt
+PERCORSO FORMATIVO 2026
+
+La Newborn Academy propone un nuovo percorso formativo di 3 mesi dedicato ai fotografi di famiglia.
+
+Il percorso nasce per aiutare fotografi principianti e intermedi a costruire una professione vera, sostenibile e strutturata.
+
+Il focus del percorso è:
+- tecnica
+- business
+- sicurezza
+- workflow
+- gestione studio
+- marketing
+
+Il percorso include:
+- lezioni registrate
+- 3 masterclass online di gruppo
+- 3 audit individuali 1:1 online
+- 2 workshop dal vivo
+- community privata
+- supporto
+
+MODULI PRINCIPALI
+
+Lezioni registrate:
+- Newborn
+- Maternity
+- Bebè & Sitter
+- Family
+- Family al tramonto
+- Post-produzione
+- Instagram per fotografi
+- Marketing (opzionale)
+
+WORKSHOP DAL VIVO
+
+La formazione include due workshop dal vivo.
+
+Workshop maternity:
+- Aversa
+- 17 settembre 2026
+
+Workshop newborn, bebè e family:
+- Torino
+- 15-16 gennaio 2027
+
+I workshop sono pratici e guidati direttamente da Mauro Aluffi e Angelica Casaccia.
+
+Durante i workshop gli studenti:
+- lavorano realmente sul set
+- consolidano la tecnica
+- migliorano workflow e sicurezza
+- possono arricchire il portfolio professionale
+
+PREZZI
+
+Esistono due formule principali:
+
+Percorso Completo:
+- 2500€ IVA compresa
+
+Percorso Completo + Marketing e Business:
+- 3500€ IVA compresa
+
+È disponibile il pagamento rateale.
+
+FILOSOFIA DELLA SCUOLA
+
+La Newborn Academy non è pensata per “collezionare immagini”.
+
+L’obiettivo è aiutare i fotografi a costruire uno studio che funzioni davvero, in modo professionale, sostenibile ed etico.
+
+La scuola dedica molta attenzione:
+- alla sicurezza del neonato
+- alla sostenibilità del business
+- alla gestione clienti
+- alla costruzione di un workflow reale
+- alla continuità lavorativa nel tempo
+```
+
 CERTIFICAZIONE SICUREZZA NEWBORN
 
 La sicurezza del neonato è una parte fondamentale della formazione.
