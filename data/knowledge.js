@@ -1,4 +1,4 @@
-```js
+
 export const knowledgeBase = `
 IDENTITÀ
 
