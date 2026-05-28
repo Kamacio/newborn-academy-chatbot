@@ -225,7 +225,23 @@ button {
   </div>
 </div>
     <div id="chat"></div>
+<div class="quick-actions">
+  <button onclick="quickMessage('Voglio iniziare da zero')">
+    Iniziare da zero
+  </button>
 
+  <button onclick="quickMessage('Voglio migliorare il newborn')">
+    Migliorare newborn
+  </button>
+
+  <button onclick="quickMessage('Mi interessa marketing')">
+    Marketing
+  </button>
+
+  <button onclick="quickMessage('Voglio info sui prezzi')">
+    Prezzi
+  </button>
+</div>
     <div class="input-row">
       <input
         type="text"
@@ -378,11 +394,13 @@ document.getElementById('typing').remove();
 
   chat.scrollTop = chat.scrollHeight;
 }
-document.getElementById('message').addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    event.preventDefault();
-    sendMessage();
-  }
+
+function quickMessage(text) {
+  document.getElementById('message').value = text;
+  sendMessage();
+}
+
+document.getElementById('message').addEventListener...
 });
   </script>
 
