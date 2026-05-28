@@ -242,7 +242,17 @@ window.onload = function() {
   typingMessage.id = 'welcomeTyping';
 
   typingMessage.innerHTML = `
-    <strong>NEO:</strong> sta scrivendo...
+    <div class="bot-row">
+  <div class="neo-avatar small">N</div>
+
+  <div class="message bot">
+    <div class="typing-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
   `;
 
   chat.appendChild(typingMessage);
@@ -300,7 +310,11 @@ typingMessage.innerHTML = `
     <div class="neo-avatar small">N</div>
 
     <div class="message bot">
-      sta scrivendo...
+      <div class="typing-dots">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
     </div>
   </div>
 `;
