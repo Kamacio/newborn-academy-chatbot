@@ -224,6 +224,32 @@
       }, 1000);
     };
 
+    function detectInterest(text) {
+
+  const t = text.toLowerCase();
+
+  if (t.includes('newborn') || t.includes('neonato')) {
+    return 'newborn';
+  }
+
+  if (t.includes('maternity') || t.includes('gravidanza')) {
+    return 'maternity';
+  }
+
+  if (t.includes('business') || t.includes('marketing')) {
+    return 'business';
+  }
+
+  if (t.includes('workshop')) {
+    return 'workshop';
+  }
+
+  if (t.includes('prezzo') || t.includes('costa')) {
+    return 'prezzo';
+  }
+
+  return 'generico';
+}
     async function sendMessage() {
       const input = document.getElementById('message');
       const chat  = document.getElementById('chat');
@@ -345,13 +371,14 @@
       const formattedConversation = conversation
         .map(msg => `${msg.role === 'assistant' ? 'NEO' : 'UTENTE'}: ${msg.content}`)
         .join('\n\n');
-
+const interest = detectInterest(formattedConversation);
       fetch('https://hook.eu2.make.com/pyj6jphurgnpkklyadxx44y486sx9b15', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name, email, phone,
           conversation: formattedConversation,
+          interest: interest,
           page: window.location.href,
           timestamp: new Date().toISOString(),
           lead_form: true
